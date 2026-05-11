@@ -1,0 +1,23 @@
+{
+  "name": "terabox-random-images",
+  "version": "1.0.0",
+  "description": "Express API for downloading random images from a public TeraBox/1024Tera share link.",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "terabox-random-images": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "cli": "node src/cli.js",
+    "check": "node --check src/index.js && node --check src/cli.js && node --check src/downloader.js && node --check src/terabox-client.js && node --check src/config.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
