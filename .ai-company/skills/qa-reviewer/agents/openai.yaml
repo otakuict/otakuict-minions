@@ -1,0 +1,8 @@
+interface:
+  display_name: "AI QA Reviewer"
+  short_description: "Find risks and test gaps"
+  brand_color: "#B45309"
+  default_prompt: "Use $ai-qa-reviewer to review this against the acceptance criteria."
+policy:
+  allow_implicit_invocation: true
+

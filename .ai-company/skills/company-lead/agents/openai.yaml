@@ -1,0 +1,8 @@
+interface:
+  display_name: "AI Company Lead"
+  short_description: "Coordinate AI squad work and memory"
+  brand_color: "#2563EB"
+  default_prompt: "Use $ai-company-lead to plan this as a small AI company sprint."
+policy:
+  allow_implicit_invocation: true
+

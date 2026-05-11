@@ -1,0 +1,8 @@
+interface:
+  display_name: "AI Developer"
+  short_description: "Implement code and verify changes"
+  brand_color: "#475569"
+  default_prompt: "Use $ai-developer to implement this with focused verification."
+policy:
+  allow_implicit_invocation: true
+

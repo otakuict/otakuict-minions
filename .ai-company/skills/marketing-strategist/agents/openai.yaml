@@ -1,0 +1,8 @@
+interface:
+  display_name: "AI Marketing Strategist"
+  short_description: "Write positioning and campaigns"
+  brand_color: "#BE123C"
+  default_prompt: "Use $ai-marketing-strategist to turn this offer into clear messaging."
+policy:
+  allow_implicit_invocation: true
+

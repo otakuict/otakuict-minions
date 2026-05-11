@@ -1,0 +1,8 @@
+interface:
+  display_name: "AI Product Manager"
+  short_description: "Shape requirements and backlog"
+  brand_color: "#0F766E"
+  default_prompt: "Use $ai-product-manager to turn this goal into requirements and acceptance criteria."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,8 @@
+interface:
+  display_name: "AI Data Engineer"
+  short_description: "Design and validate data work"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $ai-data-engineer to inspect the data and define reliable outputs."
+policy:
+  allow_implicit_invocation: true
+
