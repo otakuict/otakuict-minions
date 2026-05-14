@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-05-14 - Use Windows Terminal multipane for AI agent monitor v1
+
+Decision: Build the first AI agent monitor as a Windows Terminal multipane workflow using local runtime files and ANSI pixel cartoon characters.
+
+Reason: The user is on Windows and wants a terminal-native monitor. Windows Terminal already supports multiple panes, avoids the extra resource cost of a web terminal stack, and does not require tmux/WSL for the first version.
+
+Update: The default Windows Terminal layout should show one agent per pane. A combined overview pane is not needed by default; timeline remains optional.
+
 ## 2026-05-05 - Use local Markdown memory
 
 Decision: Store AI company memory in local Markdown files under `.ai-company/memory/`.

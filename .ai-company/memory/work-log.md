@@ -1,5 +1,19 @@
 # Work Log
 
+## 2026-05-14
+
+- Read the AI company startup, memory, Codex discovery, safety, sprint, delegation, and relevant role skill files for a new planning request.
+- Captured a new objective to plan an AI agent monitoring system with pixel cartoon characters representing each agent/persona.
+- Noted that implementation should wait until the user reviews and approves the plan.
+- Refined the plan toward a Windows Terminal multipane v1 using local runtime files and ANSI pixel character rendering instead of a web dashboard or tmux-first design.
+- Implemented `.ai-company/runtime/` seed files for latest agent state, event timeline, and session metadata.
+- Added PowerShell scripts for status updates, overview rendering, individual agent panes, timeline tailing, and Windows Terminal multipane launch.
+- Documented the monitor workflow in `AI_COMPANY_USAGE.md` and verified one-shot renders, status updates, timeline output, launcher command generation, and PowerShell parser checks.
+- Updated the Windows Terminal launcher so the default layout opens one pane per AI company role, with the timeline available only through an optional flag.
+- Fixed terminal flicker by replacing repeated `Clear-Host` calls with ANSI cursor redraw, frame diffing, and less frequent age-label changes.
+- Replaced the default nested split-pane monitor layout with a compact single-terminal agent grid that shows all roles, up to five cards per row, and wraps overflow to the next row.
+- Restored a work detail panel under the compact grid, selecting the active or most recently updated agent by default and showing full task, next action, blocker, progress, and recent events.
+
 ## 2026-05-05
 
 - Initialized local AI company folder structure.

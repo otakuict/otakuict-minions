@@ -1,0 +1,78 @@
+﻿{
+    "version":  1,
+    "updatedAt":  "2026-05-14T15:29:41.9060113+07:00",
+    "agents":  [
+                   {
+                       "agentId":  "company_lead",
+                       "role":  "Company Lead",
+                       "displayName":  "Company Lead",
+                       "status":  "idle",
+                       "currentTask":  "Ready to coordinate AI company work",
+                       "progress":  0,
+                       "blocker":  null,
+                       "lastUpdated":  null,
+                       "nextAction":  "Await assignment",
+                       "staleAfterMinutes":  15
+                   },
+                   {
+                       "agentId":  "product_manager",
+                       "role":  "Product Manager",
+                       "displayName":  "Product Manager",
+                       "status":  "idle",
+                       "currentTask":  "Ready to clarify scope and acceptance criteria",
+                       "progress":  0,
+                       "blocker":  null,
+                       "lastUpdated":  null,
+                       "nextAction":  "Await product task",
+                       "staleAfterMinutes":  15
+                   },
+                   {
+                       "agentId":  "software_developer",
+                       "role":  "Software Developer",
+                       "displayName":  "Developer",
+                       "status":  "done",
+                       "currentTask":  "Implement Windows Terminal monitor scripts",
+                       "progress":  100,
+                       "blocker":  null,
+                       "lastUpdated":  "2026-05-14T15:29:41.9018963+07:00",
+                       "nextAction":  "Use start-monitor.ps1 to open the multipane monitor",
+                       "staleAfterMinutes":  15
+                   },
+                   {
+                       "agentId":  "qa_reviewer",
+                       "role":  "QA Reviewer",
+                       "displayName":  "QA Reviewer",
+                       "status":  "idle",
+                       "currentTask":  "Ready to review outputs and risks",
+                       "progress":  0,
+                       "blocker":  null,
+                       "lastUpdated":  null,
+                       "nextAction":  "Await review task",
+                       "staleAfterMinutes":  15
+                   },
+                   {
+                       "agentId":  "data_engineer",
+                       "role":  "Data Engineer",
+                       "displayName":  "Data Engineer",
+                       "status":  "idle",
+                       "currentTask":  "Ready to inspect data, schemas, and metrics",
+                       "progress":  0,
+                       "blocker":  null,
+                       "lastUpdated":  null,
+                       "nextAction":  "Await data task",
+                       "staleAfterMinutes":  15
+                   },
+                   {
+                       "agentId":  "marketing_strategist",
+                       "role":  "Marketing Strategist",
+                       "displayName":  "Marketing",
+                       "status":  "idle",
+                       "currentTask":  "Ready to work on positioning and launch assets",
+                       "progress":  0,
+                       "blocker":  null,
+                       "lastUpdated":  null,
+                       "nextAction":  "Await marketing task",
+                       "staleAfterMinutes":  15
+                   }
+               ]
+}
