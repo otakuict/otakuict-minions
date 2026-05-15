@@ -1,0 +1,10 @@
+electron/node_modules/
+electron/dist/
+python/.venv/
+python/.tmp-test/
+python/.tmp-copy-test/
+python/build/
+python/dist/
+python/*.egg-info/
+*.sqlite3
+*.db
