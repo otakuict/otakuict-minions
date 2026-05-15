@@ -1,18 +1,18 @@
 # Work Log
 
-## 2026-05-13
+## 2026-05-14
 
-- Ran the AI company workflow for a new Windows app objective using lead, product manager, and developer roles.
-- Assessed iPhone photo import feasibility on Windows and explicitly rejected custom direct USB import as a v1 scope item.
-- Created `projects/iphone-photo-importer` as an Electron plus Python starter project.
-- Added Electron starter files for folder selection, helper invocation, and result display.
-- Added Python helper code for source scan, content-hash dedupe, copy-only import, SQLite state, and JSON import reports.
-- Added product and architecture docs that keep the MVP focused on local folder and iCloud-based ingestion paths.
-- Verified Python syntax with `python -m compileall`, verified Electron JavaScript syntax with `node --check`, and exercised sample plan/import/rerun behavior with a temporary local test folder.
-- Re-scoped the app to USB-first after the user clarified that USB matters more than cloud.
-- Added an experimental Windows USB bridge using PowerShell and `Shell.Application`, plus Electron UI for USB device refresh and selection.
-- Kept imported-folder and iCloud paths as fallback modes and moved USB staging out of the archive library into `%LOCALAPPDATA%`.
-- Verified the new `usb-devices` CLI path end to end on this machine and confirmed the no-device diagnostic path works.
+- Read the AI company startup, memory, Codex discovery, safety, sprint, delegation, and relevant role skill files for a new planning request.
+- Captured a new objective to plan an AI agent monitoring system with pixel cartoon characters representing each agent/persona.
+- Noted that implementation should wait until the user reviews and approves the plan.
+- Refined the plan toward a Windows Terminal multipane v1 using local runtime files and ANSI pixel character rendering instead of a web dashboard or tmux-first design.
+- Implemented `.ai-company/runtime/` seed files for latest agent state, event timeline, and session metadata.
+- Added PowerShell scripts for status updates, overview rendering, individual agent panes, timeline tailing, and Windows Terminal multipane launch.
+- Documented the monitor workflow in `AI_COMPANY_USAGE.md` and verified one-shot renders, status updates, timeline output, launcher command generation, and PowerShell parser checks.
+- Updated the Windows Terminal launcher so the default layout opens one pane per AI company role, with the timeline available only through an optional flag.
+- Fixed terminal flicker by replacing repeated `Clear-Host` calls with ANSI cursor redraw, frame diffing, and less frequent age-label changes.
+- Replaced the default nested split-pane monitor layout with a compact single-terminal agent grid that shows all roles, up to five cards per row, and wraps overflow to the next row.
+- Restored a work detail panel under the compact grid, selecting the active or most recently updated agent by default and showing full task, next action, blocker, progress, and recent events.
 
 ## 2026-05-05
 

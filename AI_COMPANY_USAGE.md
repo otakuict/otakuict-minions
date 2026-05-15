@@ -144,6 +144,66 @@ Do not save:
 - sensitive personal data
 - unnecessary raw chat history
 
+## Agent Monitor
+
+The AI company includes a lightweight Windows Terminal monitor for watching role status without a web dashboard.
+
+Start the monitor. By default, it opens a compact agent grid with up to five agent cards per row plus a detail panel for the active or most recently updated agent:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\start-monitor.ps1
+```
+
+Open the same grid plus a timeline pane:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\start-monitor.ps1 -IncludeTimeline
+```
+
+Open the older Windows Terminal split-pane layout:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\start-monitor.ps1 -SplitPanes
+```
+
+Preview the generated Windows Terminal command without launching it:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\start-monitor.ps1 -PrintCommand
+```
+
+Update an agent status:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\update-agent-status.ps1 -AgentId software_developer -Status working -Task "Implement monitor scripts" -Progress 50 -NextAction "Run verification"
+```
+
+Show a one-shot overview in the current terminal:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\monitor-overview.ps1 -Once
+```
+
+Show the compact grid once in the current terminal:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\monitor-grid.ps1 -Once
+```
+
+Show the compact grid and force the detail panel to a specific agent:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .ai-company\scripts\monitor-grid.ps1 -DetailAgentId software_developer
+```
+
+Runtime files:
+
+- `.ai-company/runtime/agent-state.json`: latest status per agent.
+- `.ai-company/runtime/agent-events.jsonl`: append-only event timeline.
+- `.ai-company/runtime/sessions.json`: optional terminal/session metadata.
+
+The monitor reads only local files. Event logs do not use model tokens unless Codex or another AI is asked to read those logs into context.
+
 ## Safety Guardrails
 
 All roles must follow:
@@ -228,4 +288,3 @@ For any meaningful work, ask Codex to:
 5. review the result
 6. update memory
 7. follow safety guardrails
-

@@ -1,5 +1,11 @@
 # Lessons Learned
 
+## 2026-05-14
+
+- A terminal-native monitor can stay lightweight by separating latest state (`agent-state.json`) from append-only events (`agent-events.jsonl`) and rendering only tail slices of the log.
+- Windows Terminal multipane layouts can be launched with `wt.exe` command sequences, while PowerShell scripts can pass semicolon separators as argument array elements to avoid shell escaping problems.
+- Avoid `Clear-Host` inside live terminal dashboards. Use cursor-home redraw, clear-to-end after rendering, and skip unchanged frames to prevent visible flicker in Windows Terminal.
+
 ## 2026-05-05
 
 - For reusable AI company work, separate role behavior from memory. Role files describe how agents work; memory files describe what the company knows.
