@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iPhone Photo Importer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Electron + Python helper</p>
+        <h1>Start with USB on Windows, but keep a fallback when the phone refuses to show up.</h1>
+        <p class="lede">
+          This build tries USB first through the Windows shell device layer, then falls back
+          to iCloud or an imported folder if the iPhone is not exposed cleanly.
+        </p>
+      </section>
+
+      <section class="panel controls">
+        <div class="field">
+          <label for="sourceKind">Source mode</label>
+          <select id="sourceKind">
+            <option value="usb">USB iPhone (Experimental)</option>
+            <option value="icloud">iCloud Photos</option>
+            <option value="folder">Imported Folder</option>
+          </select>
+        </div>
+
+        <div id="deviceField" class="field">
+          <label for="usbDevice">USB device</label>
+          <div class="path-row">
+            <select id="usbDevice"></select>
+            <button id="refreshUsb" type="button">Refresh</button>
+          </div>
+          <p class="hint">
+            Connect the iPhone by USB, unlock it, and tap <strong>Trust</strong> before refreshing.
+          </p>
+        </div>
+
+        <div id="sourceField" class="field">
+          <label for="sourcePath">Source folder</label>
+          <div class="path-row">
+            <input id="sourcePath" type="text" spellcheck="false" />
+            <button id="pickSource" type="button">Browse</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="libraryPath">Archive folder</label>
+          <div class="path-row">
+            <input id="libraryPath" type="text" spellcheck="false" />
+            <button id="pickLibrary" type="button">Browse</button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="planButton" class="primary" type="button">Plan Import</button>
+          <button id="runButton" type="button">Run Import</button>
+        </div>
+
+        <p id="status" class="status">Ready.</p>
+      </section>
+
+      <section class="panel output">
+        <div class="panel-head">
+          <h2>Result</h2>
+          <p>Preview and import output from the Python helper.</p>
+        </div>
+        <pre id="output">No result yet.</pre>
+      </section>
+
+      <section class="panel notes">
+        <div class="panel-head">
+          <h2>MVP Notes</h2>
+        </div>
+        <ul>
+          <li>USB mode is Windows-only and depends on Apple Devices or equivalent drivers, an unlocked phone, and a trusted connection.</li>
+          <li>When USB mode works, the app stages files from the device and then imports them into the archive.</li>
+          <li>Use iCloud Photos or Imported Folder when the iPhone is connected but not exposed in Windows.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

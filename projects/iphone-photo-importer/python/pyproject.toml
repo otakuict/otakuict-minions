@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iphone-photo-importer"
+version = "0.1.0"
+description = "Python helper for importing and archiving iPhone photos on Windows."
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+iphone-photo-importer = "iphone_photo_importer.cli:main"
+

@@ -43,3 +43,27 @@ Reason: The requested parent folder outside the workspace was not writable from 
 Decision: Use client-side fetches to PokeAPI from the Pokedex UI.
 
 Reason: Search should happen interactively in the browser, and the app can remain statically buildable while still using live Pokemon data at runtime.
+
+## 2026-05-13 - Avoid custom iPhone USB import in v1
+
+Decision: Scope the Windows photo app MVP around local-folder ingestion, including `iCloud Photos` folders and folders populated by Windows Photos or File Explorer, instead of custom direct iPhone-over-USB import.
+
+Reason: Apple and Microsoft provide user-facing Windows import flows, but not a clean low-risk developer path for a small `Electron + Python` MVP. Folder-based ingest keeps the app buildable while still solving archival, dedupe, and organization.
+
+## 2026-05-13 - Keep Electron as UI shell and Python as short-lived worker
+
+Decision: Use Electron for UI, path selection, and orchestration, while keeping Python as a short-lived filesystem ingest worker that returns JSON.
+
+Reason: This preserves clean process boundaries and leaves room for a future Windows-native USB bridge without forcing Python to own device-specific Windows integration.
+
+## 2026-05-13 - Prioritize USB in the UI, but keep fallback sources
+
+Decision: Make `USB iPhone` the first source mode in the app while keeping `Imported Folder` and `iCloud Photos` as secondary fallback paths.
+
+Reason: The user explicitly wants USB prioritized, but Windows iPhone visibility is inconsistent enough that the app still needs honest fallback paths.
+
+## 2026-05-13 - Implement the first USB spike with a PowerShell shell bridge
+
+Decision: Add a Windows-only USB bridge using PowerShell plus `Shell.Application` to enumerate and stage files from portable devices exposed by Windows.
+
+Reason: This is the fastest path to a working USB-first prototype inside the current Electron plus Python project, while a richer WPD-based helper remains an open next-step option if real-device validation shows the shell bridge is too fragile.

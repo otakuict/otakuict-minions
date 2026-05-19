@@ -45,5 +45,4 @@ The Windows Terminal-based AI agent monitor v1 has been implemented. It uses loc
 - Use the starter prompt in `prompts/use-ai-company.md`.
 - Restart Codex if newly installed skills or custom agents do not appear in the current session.
 - Rerun the discovery installer after safety or role skill changes so `.agents/skills` and `.codex/agents` receive the latest source.
-- Create a project under `projects/` when there is a specific objective.
 - Update memory after meaningful work.
